@@ -1,0 +1,35 @@
+mk_all
+This executes mk_cross_prepare, builds the full kernel and copies everything useful to the output folder.
+You should build the kernel with this.
+
+mk_clean
+Deletes the files that were created during a build
+
+mk_mrproper
+Like mk_clean but deletes more stuff. This includes the current kernel config. You may want to execute mk_defconfig or mk_customconfig afterwards.
+
+mk_menuconfig
+Open the console based kernel settings menu.
+
+mk_customconfig
+This applies the default firework_defconfig to the kernel. Make sure you have executed this once before you build the kernel or execute it before mk_menuconfig to have my configuration as a base.
+
+mk_defconfig
+This applies the samsung default configuration to the kernel.
+
+mk_both_configs
+Executes mk_defconfig and afterwards mk_menuconfig
+
+saveconfig
+Save the current .config as new firework_defconfig
+
+mk_cross_prepare
+This sets up some tools in the kernel folder for use with the cross compiler. This has to be executed after making a .config but before make all
+
+mk_dt_img
+This makes the device tree image which is part of the initrd.
+
+mk_zImage
+This makes just the kernel zImage and copies it to output/
+
+All scripts are customizable to some extent. You can specify the number of processor cores (MAKETHREADS) used by make, change the cross compiler toolchain path (CROSS_COMPILE) and the output directory location (INSTALL_MOD_PATH).
