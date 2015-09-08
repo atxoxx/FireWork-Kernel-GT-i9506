@@ -6,4 +6,6 @@ CROSS_COMPILE=/opt/linaro-4.9_2014.11/bin/arm-linux-gnueabihf-
 INSTALL_MOD_PATH=output
 
 rm -R $INSTALL_MOD_PATH/*
+rm arch/arm/boot/dt.img
+rm arch/arm/boot/zImage-dtb
 make -j$MAKETHREADS ARCH=$ARCH CROSS_COMPILE=$CROSS_COMPILE INSTALL_MOD_PATH=$INSTALL_MOD_PATH clean
