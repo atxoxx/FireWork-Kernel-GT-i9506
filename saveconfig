@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cp .config arch/arm/configs/firework_defconfig

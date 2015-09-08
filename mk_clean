@@ -8,4 +8,5 @@ INSTALL_MOD_PATH=output
 rm -R $INSTALL_MOD_PATH/*
 rm arch/arm/boot/dt.img
 rm arch/arm/boot/zImage-dtb
+rm arch/arm/mach-msm/smd_rpc_sym.c
 make -j$MAKETHREADS ARCH=$ARCH CROSS_COMPILE=$CROSS_COMPILE INSTALL_MOD_PATH=$INSTALL_MOD_PATH clean
